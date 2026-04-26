@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# FITPACK
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Fitness accountability for friend groups.** Log your meals, get judged by your friends, and pay up when you slip.
 
-## Available Scripts
+🔗 **Live App → [fitpack-henna.vercel.app](https://fitpack-henna.vercel.app)**
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## What It Does
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+FitPack turns fitness accountability into a social game. You log your meals with photos, your friends vote on whether they're on track, and rejected meals cost you ₹50. No excuses.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Log 3 meals a day** with photos and macros
+- **Friends judge your meals** — approve or reject
+- **Rejected meal = ₹50 penalty** added to your balance
+- **Earn points** for logging, judging, and keeping streaks
+- **Leaderboard** shows who's winning and who owes money
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+| Feature | Description |
+|---|---|
+| Meal Logging | Upload a food photo, add name, calories, protein, carbs, fat |
+| Community Feed | See your friends' meals and vote approve / reject |
+| Streak Tracking | Log all 3 meals daily to grow your streak |
+| Points System | Earn points for every action |
+| Leaderboard | Rank by points or streak length |
+| Weight Tracker | Log daily weight and see a weekly chart |
+| Penalty Balance | Track how much each person owes the group |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Points Breakdown
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Action | Points |
+|---|---|
+| Log a meal with photo | +3 pts |
+| Log all 3 meals in a day | +10 pts |
+| Judge someone's meal | +5 pts |
+| Log your weight | +2 pts |
+| 7-day streak bonus | +25 pts |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Frontend** — React 19, React Router 7
+- **Backend / DB** — Supabase (Postgres + Auth + Storage)
+- **Hosting** — Vercel
+- **Styling** — Custom CSS, dark theme with lime accent
+- **Utilities** — date-fns, react-hot-toast
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Run Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/AnahadhBirdh/fitpack.git
+cd fitpack
+npm install
+```
 
-## Learn More
+Create a `.env` file:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+REACT_APP_SUPABASE_URL=your_supabase_url
+REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+App runs at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> See `src/DEPLOY.md` for full Supabase + Vercel setup instructions.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Use It on Mobile
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Open the live URL in Chrome or Safari on your phone → Share → Add to Home Screen. Works like a native app.
